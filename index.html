@@ -21,7 +21,7 @@
 
 <body>
     <!-- Cabecalho -->
-    <header>
+    <header id="inicio">
         <div class="Container">
             <div id="logo">
                 <!-- hal  é usado para opotimizacao do site -->
@@ -33,14 +33,15 @@
                 <!-- Associacao da checkbox com um unicode (padrao que permite ao diversos dispositivos exibir caracteres, emojis etc) 'unicode.org/charts'-->
                 <label for="check">&#x268C;</label>
 
+                <!-- ul>li*4>a - Este comando cria a lista abaixo  -->
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Conteúdo</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#conteudo">Conteúdo</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
-
+                
         </div>
     </header>
 
@@ -53,7 +54,7 @@
     </main>
 
     <!-- Sobre -->
-    <section>
+    <section id="sobre">
         <div class="Container">
             <h2>Aprender na prática.</h2>
         </div>
@@ -74,7 +75,7 @@
     </section>
 
     <!-- Conteudo -->
-    <section>
+    <section id="conteudo">
         <div class="Container">
             <h2>Conteudo</h2>
             <h3>HTML5</h3>
@@ -84,9 +85,10 @@
     </section>
 
     <!-- Rodape -->
-    <footer>
+    <footer id="contacto">
         <div class="Container"></div>
     </footer>
+    <a href="#inicio" id="topo"><img src="img/topo.png" alt="topo do site"></a>
 </body>
 
 </html>
