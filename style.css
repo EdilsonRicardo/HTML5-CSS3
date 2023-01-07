@@ -4,82 +4,116 @@
     edilsonricardo.co.mz
     */
 
-    /* Toda Importacao é feita antes de iniciaro o código CSS */
+/* Toda Importacao é feita antes de iniciaro o código CSS */
 
-    /* Importação Google Fonts */
-     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'); 
+/* Importação Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 /* CSS RESET*/
-*{
+* {
     margin: 0;
     border: 0;
     padding: 0;
 }
 
 
- body{
-    font-family:'Open Sans', sans-serif;
+body {
+    font-family: 'Open Sans', sans-serif;
     /* 1em é o tamanho normal de fonte, mas que pode ser redimensionado de forma dinamica sem distorção ou quebra de layout, equivale a 16px */
-    font-size: 1em; 
+    font-size: 1em;
 
- }
- /* Layout */
- .Container{
+}
+
+/* Layout */
+.Container {
     /* margin com valor 0 centraliza conteúdos na tela  */
-    margin: 0 auto; 
+    margin: 0 auto;
     background-color: bisque;
- }
+}
 
- /* Botao para retornar ao topo do site */
- #topo{
+/* Botao para retornar ao topo do site */
+#topo {
     position: fixed;
     right: 10px;
     bottom: 10px;
- }
+}
+
+/* Cabecalho */
+header {
+    height: 60px;
+}
+
+#logo img {
+    width: 128px;
+    height: 128px;
+}
 
 /* Smartphone Landscape*/
-@media (min-width: 576px){
-    body{
-        background-color:  #0ff;;
-    }
-
-    /* Layout */
-    .Container{
-        max-width: 540px;
+@media (min-width: 576px) {
+    body {
+        background-color: #0ff;
+        ;
     }
 }
 
+/* Layout */
+.Container {
+    max-width: 540px;
+}
+
+/* CLASSE FLEXBOX */
+.Flex {
+    display: flex;
+    justify-content: space-between;
+    background-color: #a9a9a9;
+}
+
 /* Tablet Portrait*/
-@media (min-width: 768px){
-    body{
+@media (min-width: 768px) {
+    body {
         background-color: #ff0;
     }
 
-     /* Layout */
-     .Container{
+    /* Layout */
+    .Container {
         max-width: 720px;
     }
 }
 
 /* Tablet landccape*/
-@media (min-width: 992px){
-    body{
+@media (min-width: 992px) {
+    body {
         background-color: #f60;
     }
 
-     /* Layout */
-     .Container{
+    /* Layout */
+    .Container {
         max-width: 960px;
     }
 }
 
 /* PC */
-@media (min-width: 1200px){
-    body{
+@media (min-width: 1200px) {
+    body {
         background-color: #f00;
     }
 
-     /* Layout */
-     .Container{
+    /* Layout */
+    .Container {
         max-width: 1140px;
     }
+
+    /* Estas sao as definicoes de cabecalho que serao usadas quando o site for aberto num ecra de PC */
+
+    /* Cabecalho */
+    header {
+        height: 120px;
+    }
+
+    #logo img {
+        width: 189px;
+        height: 189px;
+        margin-top: 30px;
+    }
+
 }
