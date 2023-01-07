@@ -155,13 +155,13 @@ nav ul li a{
     }
     
     nav ul li {
-        
+        /* Coloca os itens do menu horizontalmente e a esquerda */
         float: left;
 
     }
 
     nav ul li a{
-        color: #343538;
+        color: #000000;
     }
 
     /* Este comando coloca uma cor diferente sempre que o mouse estiver sobre o link de menu */
