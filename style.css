@@ -28,7 +28,12 @@ body {
 .Container {
     /* margin com valor 0 centraliza conteúdos na tela  */
     margin: 0 auto;
-    background-color: bisque;
+}
+
+/* CLASSE FLEXBOX */
+.Flex {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Botao para retornar ao topo do site */
@@ -48,32 +53,61 @@ header {
     height: 128px;
 }
 
+/* Alteracao de caracteristicas da checkbox */
+#check {
+    display: none;
+}
+
+label {
+    font-size: 3em;
+}
+
+nav ul {
+    /* Esta linha abaixo remove os bullets */
+    list-style: none;
+    background-color: #343538;
+    /* 100vh define a altura do menu de acordo com o tamanho da tela */
+    height: 100vh;
+    /* A linha abaixo fixa todos elementos no lado/posicao especifica */
+    position: fixed;
+    top: 60px;
+    /* A linha abaixo esconde o menu */
+    right: -100%;
+    /* ESTE COMANDO FAZ COM QUE O MENU OCUPE TODO ECRA -> width: 100%; */
+    transition: all 0.5s;
+}
+
+/* Ao clicar no icone (abrir menu), o sinal til troca propriedade ul */
+#check:checked ~ ul{
+    /* Comando para mostrar o menu */
+    right: 0;
+}
+nav ul li {
+    padding: 20px;
+    border-bottom: solid #a9a9a9;
+
+}
+
+nav ul li a{
+    /* A linha abaixo remove o tracejado */
+    text-decoration: none;
+    /* A linha abaixo estabelece as cores do texto */
+    color: #fff;
+}
+
 /* Smartphone Landscape*/
 @media (min-width: 576px) {
-    body {
-        background-color: #0ff;
-        ;
+    /* Layout */
+    .Container {
+        max-width: 540px;
     }
 }
 
-/* Layout */
-.Container {
-    max-width: 540px;
-}
 
-/* CLASSE FLEXBOX */
-.Flex {
-    display: flex;
-    justify-content: space-between;
-    background-color: #a9a9a9;
-}
+
 
 /* Tablet Portrait*/
 @media (min-width: 768px) {
-    body {
-        background-color: #ff0;
-    }
-
     /* Layout */
     .Container {
         max-width: 720px;
@@ -82,22 +116,14 @@ header {
 
 /* Tablet landccape*/
 @media (min-width: 992px) {
-    body {
-        background-color: #f60;
-    }
-
     /* Layout */
     .Container {
         max-width: 960px;
     }
 }
 
-/* PC */
+/* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 1200px) {
-    body {
-        background-color: #f00;
-    }
-
     /* Layout */
     .Container {
         max-width: 1140px;
@@ -116,4 +142,30 @@ header {
         margin-top: 30px;
     }
 
+    label{
+        display:  none;
+    }
+
+    nav ul {
+        /* Ao colocar esta linha abaixo, ignora o que foi definido para top e right para nav ul */
+        position: static;
+        height: auto;
+        background-color: transparent;
+        margin-top: 50px;
+    }
+    
+    nav ul li {
+        
+        float: left;
+
+    }
+
+    nav ul li a{
+        color: #343538;
+    }
+
+    /* Este comando coloca uma cor diferente sempre que o mouse estiver sobre o link de menu */
+    nav ul li a:hover{
+        color: #f00;
+    }
 }
