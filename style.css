@@ -91,6 +91,7 @@ nav ul {
     /* A linha abaixo esconde o menu */
     right: -100%;
     /* ESTE COMANDO FAZ COM QUE O MENU OCUPE TODO ECRA -> width: 100%; */
+    width: 45%;
     transition: all 0.5s;
 }
 
