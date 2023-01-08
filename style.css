@@ -32,8 +32,23 @@ body {
 
 /* CLASSE FLEXBOX */
 .Flex {
+    /* A linha abaixo torna o display flexível */
     display: flex;
     justify-content: space-between;
+}
+
+.Botao{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
+    /* Negrito */
+    font-weight: 700;
+    background-color: #c00000;
+    /* espacamento para cima e baixo (10px) e esquerda/direita (40px) */
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    
 }
 
 /* Botao para retornar ao topo do site */
@@ -42,6 +57,8 @@ body {
     right: 10px;
     bottom: 10px;
 }
+
+/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>> */
 
 /* Cabecalho */
 header {
@@ -78,28 +95,61 @@ nav ul {
 }
 
 /* Ao clicar no icone (abrir menu), o sinal til troca propriedade ul */
-#check:checked ~ ul{
+#check:checked~ul {
     /* Comando para mostrar o menu */
     right: 0;
 }
+
 nav ul li {
     padding: 20px;
     border-bottom: solid #a9a9a9;
 
 }
 
-nav ul li a{
+nav ul li a {
     /* A linha abaixo remove o tracejado */
     text-decoration: none;
     /* A linha abaixo estabelece as cores do texto */
     color: #fff;
 }
 
-/* Smartphone Landscape*/
+main {
+    /* Determina a 75% do tamanho da tela independentemente do dispositivo */
+    height: 75vh;
+    /* Insercao de background */
+    background: url(img/banner.jpg);
+    /* Ajustar imagem de background ao tamanho da tela do dispositivo */
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5em;
+}
+
+main h2{
+    font-size: 1em ;
+    /* Arranjos de posicionamento
+    20px -> Superior, 0px -> Direita , 50px ->  Inferior , 0px --> Esquerda*/
+    margin: 20px 0px 50px 0px;
+}
+
+/* Smartphone Landscape */
 @media (min-width: 576px) {
+
     /* Layout */
     .Container {
         max-width: 540px;
+    }
+
+    /* Destaque */
+    main h1, main h2{
+        /* Colocacao de sombras */
+        text-shadow: #000000 0.05em 0.05em 0.05em;
     }
 }
 
@@ -108,22 +158,43 @@ nav ul li a{
 
 /* Tablet Portrait*/
 @media (min-width: 768px) {
+
     /* Layout */
     .Container {
         max-width: 720px;
     }
+    /* Destaque */
+    main{
+        /* 45% do tamanho total do dispositivo sera o espaco que o banner ira ocupar */
+        height: 45vh;
+    }
+    main h1{
+        font-size: 5.5em;
+    }
+    main h2{
+        font-size: 2em;
+    }
+
+
 }
 
-/* Tablet landccape*/
+/* Tablet landscape*/
 @media (min-width: 992px) {
+
     /* Layout */
     .Container {
         max-width: 960px;
     }
+
+    main {
+        height: 70vh;
+    }
+
 }
 
 /* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 1200px) {
+
     /* Layout */
     .Container {
         max-width: 1140px;
@@ -142,8 +213,8 @@ nav ul li a{
         margin-top: 30px;
     }
 
-    label{
-        display:  none;
+    label {
+        display: none;
     }
 
     nav ul {
@@ -153,19 +224,19 @@ nav ul li a{
         background-color: transparent;
         margin-top: 50px;
     }
-    
+
     nav ul li {
         /* Coloca os itens do menu horizontalmente e a esquerda */
         float: left;
 
     }
 
-    nav ul li a{
+    nav ul li a {
         color: #000000;
     }
 
     /* Este comando coloca uma cor diferente sempre que o mouse estiver sobre o link de menu */
-    nav ul li a:hover{
+    nav ul li a:hover {
         color: #f00;
     }
 }
