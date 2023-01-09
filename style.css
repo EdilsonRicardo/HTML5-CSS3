@@ -44,7 +44,7 @@ body {
     align-items: center;
 }
 
-.Botao{
+.Botao /* Poderia tambem ter usado "main a", nao inves da classe "Botao"*/{
     text-decoration: none;
     color: #fff;
     font-size: 1.3em;
@@ -57,6 +57,7 @@ body {
     border-radius: 25px;
 
 }
+
 
 /* Botao para retornar ao topo do site */
 #topo {
