@@ -28,6 +28,7 @@ body {
 .Container {
     /* margin com valor 0 centraliza conteúdos na tela  */
     margin: 0 auto;
+    /* background-color: #c00000; */
 }
 
 /* CLASSE FLEXBOX */
@@ -35,6 +36,12 @@ body {
     /* A linha abaixo torna o display flexível */
     display: flex;
     justify-content: space-between;
+
+}
+
+.Flex2{
+    display: flex;
+    align-items: center;
 }
 
 .Botao{
@@ -48,7 +55,7 @@ body {
     padding: 10px 40px;
     border: 2px solid #fff;
     border-radius: 25px;
-    
+
 }
 
 /* Botao para retornar ao topo do site */
@@ -91,7 +98,7 @@ nav ul {
     /* A linha abaixo esconde o menu */
     right: -100%;
     /* ESTE COMANDO FAZ COM QUE O MENU OCUPE TODO ECRA -> width: 100%; */
-    width: 45%;
+    width: 100%;
     transition: all 0.5s;
 }
 
@@ -137,6 +144,38 @@ main h2{
     /* Arranjos de posicionamento
     20px -> Superior, 0px -> Direita , 50px ->  Inferior , 0px --> Esquerda*/
     margin: 20px 0px 50px 0px;
+}
+
+/* Sobre */
+#sobre{
+    /* A linha abaixo coloca espacamento superior/inferior de 50px e esquerda/direita de 0px */
+    padding: 50px 0px;
+    background: url(img/background.png);
+    /* Ajustando a imagem do background ao container */
+    background-size: cover;
+
+}
+#destaqueSobre{
+    /*  A linha abaixo faz com que a imagem de background nao seja mostrada */
+    display: none;
+}
+
+#textoSobre{
+    color: #fff;
+     /* A linha abaixo coloca espacamento superior/inferior de 0px e esquerda/direita de 10px */
+    padding: 0px 10px;
+}
+
+#textoSobre h2{
+    margin-bottom: 10px;
+}
+
+.topicosSobre{
+    margin-top: 10px;
+}
+
+.topicosSobre img{
+    margin-right: 10px;
 }
 
 /* Smartphone Landscape */
