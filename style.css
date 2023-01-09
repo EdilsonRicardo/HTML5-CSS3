@@ -70,6 +70,7 @@ body {
 /* Cabecalho */
 header {
     height: 60px;
+    /* position: fixed; */
 }
 
 #logo img {
@@ -84,6 +85,13 @@ header {
 
 label {
     font-size: 3em;
+    /* padding-right: 15px; */
+    /* Fixando o menu na mesma posicao */
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    /* Baixando a opacidade do menu */
+    color: rgba(0, 0,0,0.5);
 }
 
 nav ul {
@@ -157,7 +165,7 @@ main h2{
     background-size: cover;
     /* Centralizar imagem de Background  */
     background-position: center;
-    
+
 
 }
 #destaqueSobre{
@@ -299,6 +307,6 @@ main h2{
     #destaqueSobre img {
         /* Colocando a imagem redonda */
         border-radius: 50%;
-        margin-right: 50px ;  
+        margin-right: 50px ;
     }
 }
