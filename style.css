@@ -128,6 +128,8 @@ main {
     background: url(img/banner.jpg);
     /* Ajustar imagem de background ao tamanho da tela do dispositivo */
     background-size: cover;
+    /* Centralizar imagem de Background  */
+    background-position: center;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -153,6 +155,9 @@ main h2{
     background: url(img/background.png);
     /* Ajustando a imagem do background ao container */
     background-size: cover;
+    /* Centralizar imagem de Background  */
+    background-position: center;
+    
 
 }
 #destaqueSobre{
@@ -278,5 +283,22 @@ main h2{
     /* Este comando coloca uma cor diferente sempre que o mouse estiver sobre o link de menu */
     nav ul li a:hover {
         color: #f00;
+    }
+
+    /* Sobre */
+    #destaqueSobre{
+        /* A linha abaixo faz com que o browser mostre a imagem que foi escondida em #destaqueSobre, MOSTRA SOMENTE PARA PC's ou Ecras grandes */
+        display: inline;
+    }
+    /* Efeito de rolagem parallax - Quando uma imagem fica fixa no background ao rolar a tela
+                  ESTE EFEITO FOI APENAS APLICADO A SECCAO SOBRE */
+    #sobre{
+        background-attachment: fixed;
+    }
+
+    #destaqueSobre img {
+        /* Colocando a imagem redonda */
+        border-radius: 50%;
+        margin-right: 50px ;  
     }
 }
