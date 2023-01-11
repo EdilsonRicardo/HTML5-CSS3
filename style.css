@@ -44,6 +44,11 @@ body {
     align-items: center;
 }
 
+.Flex3{
+    display: flex;
+    flex-direction: column;
+}
+
 .Botao /* Poderia tambem ter usado "main a", nao inves da classe "Botao"*/{
     text-decoration: none;
     color: #fff;
@@ -66,7 +71,7 @@ body {
     bottom: 10px;
 }
 
-/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>> */
+/* Smartphone Portrait >>>>>>>>>>>>>>>>> */
 
 /* Cabecalho */
 header {
@@ -192,7 +197,26 @@ main h2{
     margin-right: 10px;
 }
 
-/* Smartphone Landscape */
+/* One Page */
+#onepage{
+    /* Espacaemnto da vertical e horizontal  */
+    padding: 50px 10px;
+}
+
+#onepage h2{
+    margin-bottom: 10px;
+}
+
+#onepage p{
+    margin-bottom: 25px;
+}
+
+#video iframe {
+    width: 340px;
+    height: 191px;
+}
+
+/* Smartphone Landscape >>>>>>>>>>>>>>>>*/
 @media (min-width: 576px) {
 
     /* Layout */
@@ -205,12 +229,19 @@ main h2{
         /* Colocacao de sombras */
         text-shadow: #000000 0.05em 0.05em 0.05em;
     }
+
+    /* One Page */
+    #video iframe {
+        width: 560px;
+        height: 315px;
+        border: 0;
+    }
 }
 
 
 
 
-/* Tablet Portrait*/
+/* Tablet Portrait>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 768px) {
 
     /* Layout */
@@ -232,7 +263,7 @@ main h2{
 
 }
 
-/* Tablet landscape*/
+/* Tablet landscape>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 992px) {
 
     /* Layout */
@@ -309,5 +340,11 @@ main h2{
         /* Colocando a imagem redonda */
         border-radius: 50%;
         margin-right: 50px ;
+    }
+
+    /* One Page */
+    .Flex3{
+        flex-direction: row;
+        align-items: center;
     }
 }
