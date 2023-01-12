@@ -71,6 +71,14 @@ body {
     bottom: 10px;
 }
 
+.Card{
+    margin-top: 25px;
+    width: 338px;
+    height: 520px;
+}
+
+
+
 /* Smartphone Portrait >>>>>>>>>>>>>>>>> */
 
 /* Cabecalho */
@@ -243,6 +251,28 @@ main h2{
 
   #qrCode{
     display: none;
+  }
+
+  /* Conteudo */
+  #conteudo{
+    padding: 50px 0px;
+  }
+
+  #conteudo h2{
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  #todos{
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  #todos a{
+    /* Remocao de sublinhado */
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700px;
+    font-size: 1.25em;
   }
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>*/
