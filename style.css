@@ -49,6 +49,12 @@ body {
     flex-direction: column;
 }
 
+.Flex4{
+   display: flex; 
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+}
+
 .Botao /* Poderia tambem ter usado "main a", nao inves da classe "Botao"*/{
     text-decoration: none;
     color: #fff;
@@ -75,9 +81,31 @@ body {
     margin-top: 25px;
     width: 338px;
     height: 520px;
+    background-color: #e8e8e8;
+    border: 1px solid #a1a1a1;
+    border-radius: 25px;
+    text-align: center;
 }
 
+.Card img{
+    border-radius: 25px 25px 0px 0px;
+}
 
+.Card h3{
+    margin-top: 15px;
+}
+
+.Card p{
+    text-align: left;
+    color: #434343;
+    /* Superior, Direita, inferior, esquerda */
+    padding: 10px 30px 50px 30px;
+}
+
+.Card a{
+    padding: 10px 100px;
+    border: 0;
+}
 
 /* Smartphone Portrait >>>>>>>>>>>>>>>>> */
 
